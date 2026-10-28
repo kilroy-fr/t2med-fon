@@ -24,8 +24,8 @@ namespace T2medFon
             if (number.StartsWith("00")) number = "+" + number.Substring(2);
             if (number.StartsWith("+") && countryCode != "")
                 number = number.StartsWith("+" + countryCode) ? "0" + number.Substring(countryCode.Length + 1) : "00" + number.Substring(1);
-            // Local numbers often lack the area code; extensions (up to 4 digits) and special services (1xx) must stay as they are.
-            if (areaCode != "" && Regex.IsMatch(number, @"^[2-9][0-9]{4,}\z")) number = areaCode + number;
+            // Local numbers often lack the area code; extensions (up to 3 digits) and special services (1xx) must stay as they are.
+            if (areaCode != "" && Regex.IsMatch(number, @"^[2-9][0-9]{3,}\z")) number = areaCode + number;
             return number;
         }
 

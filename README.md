@@ -58,7 +58,7 @@ Das Telefon wählt sofort, ohne vorher selbst zu klingeln. Danach in T2med auf e
 
 Leerzeichen, Klammern, `-`, `/` und `.` werden entfernt. Internationale Nummern werden für die deutsche Wahl umgeschrieben: `+49 (0)761 123456` → `0761123456`, `+41 44 …` → `004144…`. Andere Zeichen führen zur Ablehnung.
 
-Ist `area_code` eingetragen, bekommen Ortsnummern ohne Vorwahl sie vorangestellt: `40254` → `076140254`. Das gilt nur für Nummern ab fünf Ziffern, die mit 2–9 beginnen; Nebenstellen (bis vier Ziffern) und Sondernummern wie `112` oder `116117` bleiben unverändert.
+Ist `area_code` eingetragen, bekommen Ortsnummern ohne Vorwahl sie vorangestellt: `40254` → `076140254`. Das gilt nur für Nummern ab vier Ziffern, die mit 2–9 beginnen; Nebenstellen (bis drei Ziffern) und Sondernummern wie `112` oder `116117` bleiben unverändert.
 
 ## Konfiguration
 

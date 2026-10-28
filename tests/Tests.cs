@@ -39,7 +39,8 @@ namespace T2medFon
                 Eq("0761123456", Number.FromLink("tel:+49 761 123456", "49", "0761"));
                 Eq("0041441234567", Number.FromLink("tel:+41441234567", "49", "0761"));
                 Eq("+41441234567", Number.FromLink("tel:+41441234567", "", "0761"));
-                Eq("2154", Number.FromLink("tel:2154", "49", "0761"));
+                Eq("07612154", Number.FromLink("tel:2154", "49", "0761"));
+                Eq("215", Number.FromLink("tel:215", "49", "0761"));
                 Eq("112", Number.FromLink("tel:112", "49", "0761"));
                 Eq("116117", Number.FromLink("tel:116117", "49", "0761"));
                 Eq("40254", Number.FromLink("tel:40254", "49"));
