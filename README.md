@@ -54,6 +54,8 @@ Das Telefon wählt sofort, ohne vorher selbst zu klingeln. Danach in T2med auf e
 | leitet weiter | Telefon erwartet `https://`; dann meist auch `tls_verify = false` |
 | Ungültige Rufnummer | Link enthält mehr als Ziffern, `+` und Trennzeichen |
 
+Landet T2med nach dem Klick hinter anderen Fenstern, hilft ein Fokus-Protokoll weiter. Eine leere Datei `%APPDATA%\t2med-fon\t2med-fon.log` anlegen; solange sie existiert, hängt t2med-fon bei jedem Aufruf an, wer es gestartet hat und welches Fenster wann im Vordergrund war. Das Protokoll nennt nur Fensterklassen und Programmnamen, keine Fenstertitel (die Patientennamen enthalten können). Zum Abschalten die Datei löschen.
+
 ## Rufnummern
 
 Leerzeichen, Klammern, `-`, `/` und `.` werden entfernt. Internationale Nummern werden für die deutsche Wahl umgeschrieben: `+49 (0)761 123456` → `0761123456`, `+41 44 …` → `004144…`. Andere Zeichen führen zur Ablehnung.

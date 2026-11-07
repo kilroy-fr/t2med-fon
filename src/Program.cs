@@ -20,6 +20,17 @@ namespace T2medFon
         [STAThread]
         private static int Main(string[] args)
         {
+            // Captured first, while the window with the clicked link is still in front.
+            Foreground foreground = new Foreground();
+            FocusLog log = new FocusLog(FocusLog.DefaultPath());
+            log.Start(foreground.Window);
+            int code = Run(args);
+            log.Stop(code, foreground.Restore());
+            return code;
+        }
+
+        private static int Run(string[] args)
+        {
             bool dialog = true;
             string configPath = Config.DefaultPath();
             string link = null;
