@@ -11,15 +11,17 @@ Version 2.0.0 · [Änderungen](CHANGELOG.md) · MIT-Lizenz
 - Windows 10 oder 11 (das enthaltene .NET Framework 4 genügt).
 - Yealink-Tischtelefon im selben Netz, z. B. T46S.
 - Telefon **und** Arbeitsplatz-PC mit fester IP-Adresse (DHCP-Reservierung im Router), weil das Telefon Wählbefehle nur von freigegebenen Adressen annimmt.
-- Wird das Telefon vom Anbieter (z. B. fonial) automatisch provisioniert, beim Support klären, ob lokal gesetzte Action-URI-Einstellungen erhalten bleiben.
-
 ## Telefon einrichten
+
+Wird das Telefon vom Anbieter automatisch konfiguriert (bei fonial: *Automatische Konfiguration* im Kundenkonto), zuerst diese Konfiguration abschließen und die folgenden Einstellungen **danach** von Hand eintragen. Das Admin-Passwort der Weboberfläche setzt fonial dabei neu; es steht im fonial-Kundenkonto bei den SIP-Benutzerdaten des Geräts.
 
 In der Weboberfläche des Telefons (`http://<Telefon-IP>`, Admin-Login). Menünamen können je nach Firmware leicht abweichen.
 
 1. *Features → Remote Control* → *Action URI allow IP List*: IP-Adresse des Arbeitsplatz-PCs eintragen (Parameter `features.action_uri_limit_ip`). Nicht `any` eintragen.
 2. Optional für Bluetooth-Headsets: *Features → General Information → Headset Prior* = Enabled, damit gewählte Gespräche am Headset landen.
 3. Beim ersten Wählbefehl fragt das Telefon einmalig *Allow remote control?* – mit **OK** bestätigen.
+
+Wählt das Telefon nach einer erneuten automatischen Konfiguration (z. B. nach Werksreset oder Gerätetausch) nicht mehr, Schritt 1 prüfen und gegebenenfalls wiederholen.
 
 ## Installation auf dem Arbeitsplatz
 
